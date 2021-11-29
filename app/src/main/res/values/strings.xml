@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Scrabble</string>
+    <string-array name="Level">
+        <item>C1</item>
+        <item>B2</item>
+        <item>B1</item>
+        <item>A2</item>
+        <item>A1</item>
+    </string-array>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://www.scrabble-app.com/.well-known/assetlinks.json\" }]</string>
+</resources>

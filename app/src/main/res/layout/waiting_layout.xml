@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#cad2c5">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrabble"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422">
+
+        <ImageView
+            android:id="@+id/loading_L"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_l"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/loading_O" />
+
+        <ImageView
+            android:id="@+id/loading_O"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_o"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/loading_A" />
+
+        <ImageView
+            android:id="@+id/loading_A"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/loading_D" />
+
+        <ImageView
+            android:id="@+id/loading_D"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_d"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/loading_I"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_i"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/loading_D" />
+
+        <ImageView
+            android:id="@+id/loading_N"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/loading_I" />
+
+        <ImageView
+            android:id="@+id/loading_G"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_g"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/loading_N"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginHorizontal="50dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/progressbar"
+        android:max="100"
+        android:progress="20"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@id/scrabble"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

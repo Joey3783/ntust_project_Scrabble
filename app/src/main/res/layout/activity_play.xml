@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="GameActivity.PlayActivity"
+    android:background="#f4f1de">
+<!--ccff99-->
+
+<!--toolbar_play-->
+
+
+    <FrameLayout
+        android:id="@+id/FL_score"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingVertical="5dp"
+        android:background="#81b29a">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LL_score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pls"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cl_cps"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_player"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txt_player"
+                    android:layout_marginLeft="0.5dp"/>
+                <!--                    android:src="@drawable/player_bold"-->
+                <TextView
+                    android:id="@+id/txt_player"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="25sp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_cps"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                app:layout_constraintLeft_toRightOf="@id/cl_pls"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="#ffff">
+
+                <TextView
+                    android:id="@+id/txt_comp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="5dp"
+                    android:text=""/>
+
+                <ImageView
+                    android:id="@+id/img_robot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="2dp"/>
+<!--                android:src="@drawable/robot2"-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyc_comp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frame_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FL_score" />
+
+    <FrameLayout
+        android:id="@+id/frame_board"
+        app:layout_constraintTop_toBottomOf="@id/recyc_comp"
+        app:layout_constraintBottom_toTopOf="@+id/recyc_hand"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyc_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#0000"/>
+
+        <TextView
+            android:id="@+id/txt_score"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:background="#E14338"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="score"/>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyc_hand"
+        app:layout_constraintTop_toBottomOf="@id/frame_board"
+        app:layout_constraintBottom_toTopOf="@id/btn_Go"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingHorizontal="20dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+        <LinearLayout
+
+            android:id="@+id/LL_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/new_toolbar">
+
+
+            <ImageButton
+                android:id="@+id/btn_Menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_menu_new"/>
+
+            <ImageButton
+                android:id="@+id/btn_Pass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="#0000"
+
+                android:src="@drawable/ic_pass__1_" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/btn_Shuffle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/ic_shuffle" />
+
+            <ImageButton
+                android:id="@+id/btn_Bag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/ic_hist" />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btn_Go"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:background="@drawable/button_go"
+        android:text="GO"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_Generate"
+        app:layout_constraintTop_toTopOf="@id/FL_score"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Generate"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cad2c5"
+        android:visibility="visible">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrabble"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4">
+
+            <ImageView
+                android:id="@+id/loading_L"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_l"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/loading_O" />
+
+            <ImageView
+                android:id="@+id/loading_O"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_o"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/loading_A" />
+
+            <ImageView
+                android:id="@+id/loading_A"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_a"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/loading_D" />
+
+            <ImageView
+                android:id="@+id/loading_D"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/loading_I"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_i"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/loading_D" />
+
+            <ImageView
+                android:id="@+id/loading_N"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_n"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/loading_I" />
+
+            <ImageView
+                android:id="@+id/loading_G"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_g"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/loading_N"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginHorizontal="50dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progressbar"
+            android:progress="0"
+            android:background="#ffff"
+            app:layout_constraintTop_toBottomOf="@id/scrabble"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <!--設定陰影顏色-->
+            <solid
+                android:color="#F1EEF3"/>
+            <!--                android:startColor="#D0CECE"-->
+            <!--                android:endColor="@color/background_grey"-->
+
+            <!--設定圓角的尺寸-->
+            <corners
+                android:radius="20dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:bottom="2dp"
+        android:right="2dp"
+        android:top="1dp"
+        android:left="1dp"
+        >
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+
+
+
+
+</layer-list>

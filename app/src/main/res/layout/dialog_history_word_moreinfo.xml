@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/moreinfo_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Strength"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_hisword_part_of_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginLeft="20dp"
+        android:text="test"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/moreinfo_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/txt_hisword_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="tesxt"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txt_hisword_part_of_speech"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/morinfo_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        app:layout_constraintTop_toBottomOf="@id/txt_hisword_meaning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#0000"
+        android:textColor="#637D6C"/>
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/txt_hisword_part_of_speech"
+        android:src="@drawable/mw_logo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

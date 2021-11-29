@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="oval">
+            <!--設定陰影顏色ccff99 7ecc0a-->
+            <gradient
+                android:startColor="#6c757d"
+                android:endColor="#6c757d"
+                android:angle="-90"
+                />
+
+
+            <!--設定圓角的尺寸-->
+            <size
+                android:width="45dp"
+                android:height="45dp"/>
+            <stroke
+                android:width="0dp"
+                android:color="@color/black"/>
+        </shape>
+    </item>
+
+    <item
+        android:top="0dp"
+        android:bottom="3dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape
+            android:shape="oval">
+            <solid android:color="#ffff"/>
+            <size
+                android:width="40dp"
+                android:height="40dp"/>
+            <stroke
+                android:width="0dp"
+                android:color="@color/black"/>
+        </shape>
+    </item>
+<!--   e3ffe4 -->
+
+
+
+
+</layer-list>
